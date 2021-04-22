@@ -1,7 +1,18 @@
+import React, { useState } from 'react'; 
 import logo from './logo.svg';
 import './App.css';
+import FunctionComponent from './Components/FunctionComponent';
+import StatefullComponent from './Components/StatefullComponent';
+import Events from './Components/Events';
+import Hooks from './Components/Hooks';
+
 
 function App() {
+
+  const [ title, setTitle ] = useState('');
+
+  document.title = `${title}`
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +28,15 @@ function App() {
         >
           Learn React
         </a>
+        <input onChange={(e) => { setTitle(e.target.value)}}/>
+        <hr/>
+        <FunctionComponent name="Jona"/>
+        <hr/>
+        <StatefullComponent/>
+        <hr/>
+        <Events/>
+        <hr/>
+        <Hooks setTitle={setTitle} title={title}/>
       </header>
     </div>
   );
