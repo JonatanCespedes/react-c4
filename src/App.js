@@ -5,6 +5,7 @@ import FunctionComponent from './Components/FunctionComponent';
 import StatefullComponent from './Components/StatefullComponent';
 import Events from './Components/Events';
 import Hooks from './Components/Hooks';
+import ReactHookForm from './Components/ReactHookForm';
 
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
         <Events/>
         <hr/>
         <Hooks setTitle={setTitle} title={title}/>
+        <hr/>
+        <ReactHookForm/>
       </header>
     </div>
   );
